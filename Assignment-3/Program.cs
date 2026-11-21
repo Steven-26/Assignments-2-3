@@ -1,4 +1,69 @@
-﻿#region Question 8
+#region Question 1
+// Declare string title = "clean code";. Call title.ToUpper() and store it in a new variable upperTitle. Print both title and upperTitle to show that title did not change.
+
+string titleQ1 = "clean code";
+string upperTitle = titleQ1.ToUpper();
+
+Console.WriteLine(titleQ1);
+Console.WriteLine(upperTitle);
+
+#endregion
+#region Question 2
+// Declare two separate string variables, both set to the literal "Clean Code". Use ReferenceEquals() to check if they point to the same object in memory.
+
+string title1 = "Clean Code";
+string title2 = "Clean Code";
+
+Console.WriteLine(object.ReferenceEquals(title1, title2));
+
+#endregion
+#region Question 3
+// Create a StringBuilder, Append() the text "Book List", then Append() " - Updated" onto the same object. Print the final result.
+
+System.Text.StringBuilder sb = new System.Text.StringBuilder();
+
+sb.Append("Book List");
+sb.Append(" - Updated");
+
+Console.WriteLine(sb);
+
+#endregion
+#region Question 4
+// Using the StringBuilder from the question above, use Replace() to change "Book List" into "Library". Print the result.
+
+sb.Replace("Book List", "Library");
+
+Console.WriteLine(sb);
+
+#endregion
+#region Question 5
+// Given string title = "Clean Code"; and int pages = 464;, build the sentence "Book: Clean Code, Pages: 464" using the + operator.
+
+string bookTitle = "Clean Code";
+int bookPages = 464;
+
+string result = "Book: " + bookTitle + ", Pages: " + bookPages;
+
+Console.WriteLine(result);
+
+#endregion
+#region Question 6
+// Build the same sentence as above, but using string interpolation ($"...").
+
+string resultQ6 = $"Book: {bookTitle}, Pages: {bookPages}";
+
+Console.WriteLine(resultQ6);
+
+#endregion
+#region Question 7
+// Build the same sentence again, but using string.Format().
+
+string resultQ7 = string.Format("Book: {0}, Pages: {1}", bookTitle, bookPages);
+
+Console.WriteLine(resultQ7);
+
+#endregion
+#region Question 8
 // Given int pages = 464;, write an if / else statement that prints "Long Book" if pages is greater than 300, otherwise prints "Short Book".
 
 int pages = 464;
